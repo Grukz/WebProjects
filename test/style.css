@@ -1,0 +1,14 @@
+.wrap{
+	width: 90%;
+	height: 600px;
+	margin: auto;
+	background-color: red;
+}
+.post{
+	position: relative;
+	width: 90%;
+	height: 200px;
+	margin: auto;
+	background-color: blue;
+	top: 200px;
+}

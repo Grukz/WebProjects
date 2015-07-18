@@ -1,0 +1,7 @@
+body{
+	background: url(images/x.jpg) fixed no-repeat;
+	/*background-size: 100%;*/
+}
+h1{
+	text-align: center;
+}

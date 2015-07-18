@@ -1,0 +1,35 @@
+html, body{
+	background-color: #F5F5F5;
+}
+.filtercontainer{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2%;
+}
+h2{
+	text-align: center;
+}
+.deptcont, .subcont{
+	margin: 2%;
+	display: inline-block;
+}
+.bookcontainer{
+	width: 80%;
+	margin-left: 10%;
+	overflow: hidden;
+	padding: 1%;
+    background-color:#efefef;
+    border-radius: 1%;
+
+}
+.tooltip-inner {
+    white-space:pre;
+    max-width: none;
+}
+.demo{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+.row{
+	overflow: hidden;
+}

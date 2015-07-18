@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"> 
+<head>  
+    <meta charset="UTF-8"> 
+    <title>Welcome | Website Forum</title>  
+    <link rel="stylesheet" href="styleforum.css" type="text/css">  
+</head>  
+<body>  
+<h1>My forum</h1>  
+    <div id="wrapper">  
+        <div id="menu">  
+            <div id="userbar">  
+                Hello <strong>admin. Not you? <a href="signout.php">Sign out</a>
+            </div>
+            <div class="nav">
+                <a class="item" href="/heart/index.php">Home</a> -  
+                <a class="item" href="/heart/create_topic.php">Create a topic</a> -  
+                <a class="item" href="/heart/create_cat.php">Create a category</a>           
+            </div>    
+        </div>  
+        <div id="content">
+            <h2>How do i create a php dynamic page?</h2>
+            <div id="posts">
+            <div class="post">
+                <div class="left">
+                    <p class="username">Adminnnnnnnnnnnnnn</p>
+                    <p class="date">29-01-2014</p>
+                </div>
+                <div class="right">
+                    <p>Hi, This post is awesome. I can see what i can do about it.</p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="left">
+                        <p class="username">Admin</p>
+                        <p class="date">29-01-2014</p>
+                    </div>
+                    <div class="right">
+                        <p>
+                            Hi, there. this is my second post. This post is awesome. I can see what i can do about it.can do about it.
+                            can do about it.is my second post. This post is awesome. I can see what i can do about it.can do about it.
+                            can do about it.is my second post.s my second post.s my second post.s my second post.s my second post.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- <form method="post" action=""> -->
+                <h2>Post a reply</h2>
+                <textarea name="reply-content" id="text"/></textarea>
+                <br>
+                <input type="submit" value="Post"  id="button" />
+            <!-- </form> -->
+        </div><!-- content -->  
+    </div><!-- wrapper -->  
+    <div id="footer">
+        <P>Created for knowledge<P>
+    </div>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script>
+        
+       $('#button').on('click', function  (e) {
+            $.ajax({
+            url: 'post.php',
+            type: 'POST',
+            datatype: 'datatype',
+            success: function(html){
+                var $name = $('#text').val(); 
+                console.log($('#text').val());
+                $.post("post.php", {'reply-content': $name}); 
+                $('#posts').append('<div class="post1"><div class="left"><p class="username">Adminnnnnnnnnnnnnn</p><p class="date">29-01-2014</p></div><div class="right"><p>' + $name + '</p></div></div>');
+                $('.post1').fadeIn(400);
+                $('#text').val('');
+            }
+        })
+        
+        });       
+
+
+
+
+
+    </script>
+</body>  
+</html>

@@ -1,0 +1,209 @@
+@font-face{
+    font-family: myFont;
+    src: url(DroidSerif.ttf);
+}
+
+body{
+/*  background: url(images/ax.jpg) no-repeat center center fixed;
+    background-color: rgba(120,128,194);       
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    background: url(images/pattern_40.gif);
+}
+#posts{
+  
+  padding-top: 10px;
+}
+.effect2, .effect3{
+  width:90%;
+  min-height: 100px;
+  height: auto;
+  background:#FFF;
+  margin:20px auto;
+/*  border-top: solid 1px;
+  border-left: solid 1px;
+  border-right: solid 1px;*/
+  border-radius: 10px;
+}
+.effect3{
+display: none;
+}
+#menu{
+}
+h2{
+  text-align: center;
+}
+#q{
+  border: solid 1px;
+  width: 80%;
+  margin: 10px auto;
+}
+h1{
+  text-align: center;
+  margin-top: 50px;
+}
+#userbar{
+  text-align: right;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  /*padding-top: 0.5em;*/
+  padding-bottom: 0;
+  z-index: 1;
+  display: inline;
+  background-color: red;
+  font-size: 20px;
+}
+#userbar a{
+  margin-right: 20px;
+  text-decoration: none;
+  background-color: green;
+  height: inherit;
+  bottom: 0px;
+}
+ul{
+  /*position: fixed;*/
+  display: inline;
+}
+#userbar li{
+  list-style: none;
+  display: inline;
+  /*position: fixed;  */
+}
+.nav{
+  background-color: yellow;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2, .effect3
+{
+  position: relative;
+  background-color: rgb(39,40,34);
+}
+.effect2:before, .effect2:after, .effect3:before, .effect3:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+/*.effect2:after, .effect3:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}*/
+.post{
+    background-color: pink;
+    overflow: hidden;
+    height: auto;
+    min-height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.left{
+    /*background-color: green;*/
+    float: left;
+    width: 13%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 30px;
+}
+.left p{
+  /*background-color: orange;*/
+  margin-top: 4px;
+}
+.right{
+    /*background-color: yellow;*/
+    font-family: myFont;
+    margin-left: 10px;
+    overflow: hidden;
+    padding: 8px 8px;
+    border-left: solid black 2px;
+    min-height: 100px;
+    height: 100%;
+}
+p{
+    /*background-color: white;*/
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    /*font-family: sans-serif;*/
+}
+.date{
+    font-size: 15px;
+    font-style: italic;
+    word-wrap: break-word;
+    /*font-family: sans-serif;*/
+}
+.username{
+    font-size: 15px;
+    font-family: arial;
+    word-wrap: break-word;
+}
+.right p{
+    /*background-color: orange;*/
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+#wrapper{
+  background-color: rgb(89,113,152);
+  border-radius: 30px;
+}
+form h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+textarea{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100px;
+    /*font-family: comic;*/
+}
+#button{
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    margin-left: 88%;
+    width: 80px;
+    height: 30px;
+}
+#footer p{
+  text-align: center;
+  font-size: 10px;
+}

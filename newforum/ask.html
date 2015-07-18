@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forum</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="userbar">
+		<div class="username">
+			<p>Admin</p>
+		</div>
+		<div class="menu">
+			
+		</div>
+		<div class="signout">
+			<p>Sign out</p>
+		</div>
+		<div class="nav">
+				<a href="topic.html"><li>Home</li></a>
+				<li class="separator"></li>
+				<a href="ask.html"><li class="q">Ask a question</li></a>
+		</div>
+	</div>	<!-- userbar -->
+	
+	<div class="wrapper2">
+		<p class="header">Ask a question</p>
+		<form method="post" action="" id="ask"> 
+                    <p>Subject: </p><input type="text" name="topic_subject" /> 
+                    <p>Category:</p>
+                    <select name="topic_cat"> 
+	                    <option value="1">php</option>
+	                    <option value="2">html</option>
+	                    <option value="3">javascript</option>
+	                    <option value="4">css</option>
+                    </select>
+                    <p>Question: </p><textarea name="post_content" /></textarea> 
+                    <br><input type="submit" id ="askit" value="Ask!" /> 
+        </form>
+		
+	</div> <!-- wrapper -->
+	<footer>
+		
+	</footer>
+	<script src="jquery-1.10.2.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

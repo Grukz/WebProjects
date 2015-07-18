@@ -1,0 +1,19 @@
+h1{
+	text-align: center;
+	background-color: red;
+}
+
+div{
+	width: 80%;
+	margin: auto;
+	background-color: blue;
+	color: white;
+	padding: 20px 20px;
+	font: helvetica sans-serif;
+	font-size: 120%;
+}
+footer{
+	text-align: center;
+	background-color: yellow;
+	margin-top: 20px;
+}

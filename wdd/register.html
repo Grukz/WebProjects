@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Web Designer's Desk</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" />
+</head>
+<body onload="initForm();">
+    <div id="masthead">
+        <ul id="nav">
+            <li><a class="active" title="" href="index.html">Home</a></li>
+            <li><a title="" href="services.html">Services</a></li>
+            <li><a title="" href="register.html">Register</a></li>
+            <li><a title="" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div id="wrap">
+        <div id="header">
+            <img alt="Eiffel tower" src="images/eiffel.jpg" />
+            <h1>WDD builds uniquely <span class="amp">&amp;</span>for the web.</h1>
+        </div>
+        <script type="text/javascript" src="ajax.js"> </script>
+    <script type="text/javascript" src="date.js"> </script>
+
+    <script type="text/javascript">
+      
+      var ajaxReq = new AjaxRequest();
+
+      function addBlogEntry() {
+        document.getElementById("add").disabled = true;
+        document.getElementById("status").innerHTML = "Adding...";
+
+        ajaxReq.send("POST", "addblogentry.php", handleRequest, "application/x-www-form-urlencoded; charset=UTF-8",
+          "date=" + document.getElementById("date").value + "&body=" + document.getElementById("body").value +
+          "&image=" + document.getElementById("image").value);
+      }
+
+      
+      function handleRequest() {
+        if (ajaxReq.getReadyState() == 4 && ajaxReq.getStatus() == 200) {
+         
+          document.getElementById("add").disabled = false;
+          document.getElementById("status").innerHTML = "";
+
+          alert("The new blog entry was successfully added.");
+        }
+      }
+
+      function initForm() {
+        document.getElementById("date").value = (new Date()).shortFormat();
+        document.getElementById("body").focus();
+      }
+    </script>
+  </head>
+
+  
+    <h3>User's request</h3>
+    Date: <input type="text" id="date" name="date" value="" size="10" /><br />
+    Body: <input type="text" id="body" name="body" value="" size="60" /><br />
+    Image (optional): <input type="text" id="image" name="image" value="" size="20" /><br />
+    <input type="button" id="add" value="Add the New Blog Entry" onclick="addBlogEntry();" /><br />
+    <div id="status"></div>
+    <a href="blog.html">Show blogs</a>
+        <div id="footer">
+            <p>Copyright &copy; Web Designer's Design, all rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

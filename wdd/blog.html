@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Web Designer's Desk</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" />
+</head>
+
+
+
+
+
+<script type="text/javascript" src="ajax.js"> </script>
+    <script type="text/javascript" src="date.js"> </script>
+
+    <script type="text/javascript">
+      Date.prototype.shortFormat = function() {
+        return (this.getMonth() + 1) + "/" + this.getDate() + "/" + this.getFullYear();
+      }
+
+     
+      function Blog(body, date, image) {
+        // Assign the properties
+        this.body = body;
+        this.date = date;
+        this.image = image;
+      }
+
+      Blog.prototype.toString = function() {
+        return "[" + this.date.shortFormat() + "] " + this.body;
+      };
+      Blog.prototype.toHTML = function(highlight) {
+        var blogHTML = "";
+        blogHTML += highlight ? "<p style='background-color:#EEEEEE'>" : "<p>";
+
+        
+        if (this.image) {
+          blogHTML += "<strong>" + this.date.shortFormat() + "</strong><br /><table><tr><td><img src='" +
+            this.image + "'/></td><td style='vertical-align:top'>" + this.body + "</td></tr></table><em>" +
+            this.signature + "</em></p>";
+        }
+        else {
+          blogHTML += "<strong>" + this.date.shortFormat() + "</strong><br />" + this.body +
+            "<br /><em>" + this.signature + "</em></p>";
+        }
+        return blogHTML;
+      };
+
+      Blog.prototype.containsText = function(text) {
+        return (this.body.toLowerCase().indexOf(text.toLowerCase()) != -1);
+      };
+
+      Blog.prototype.signature = "by WDD";
+
+      // Sort helper to sort blog entries in reverse chronological order (most recent first)
+      Blog.blogSorter = function(blog1, blog2) {
+        return blog2.date - blog1.date;
+      };
+
+      var blog = new Array();
+
+      // Global Ajax request
+      var ajaxReq = new AjaxRequest();
+
+      function loadBlog() {
+        document.getElementById("blog").innerHTML = "<img src='wait.gif' alt='Loading...' />";
+        ajaxReq.send("GET", "blog.xml", handleRequest);
+      }
+
+      // Handle the Ajax request
+      function handleRequest() {
+        if (ajaxReq.getReadyState() == 4 && ajaxReq.getStatus() == 200) {
+          
+          var xmlData = ajaxReq.getResponseXML().getElementsByTagName("blog")[0];
+
+          Blog.prototype.signature = "by " + getText(xmlData.getElementsByTagName("author")[0]);
+
+          
+          var entries = xmlData.getElementsByTagName("entry");
+          for (var i = 0; i < entries.length; i++) {
+          
+            blog.push(new Blog(getText(entries[i].getElementsByTagName("body")[0]),
+              new Date(getText(entries[i].getElementsByTagName("date")[0])),
+              getText(entries[i].getElementsByTagName("image")[0])));
+          }
+
+          document.getElementById("search").disabled = false;
+          document.getElementById("showall").disabled = false;
+          document.getElementById("viewrandom").disabled = false;
+
+       
+          showBlog(5);
+        }
+      }
+
+      // Show the list of blog entries
+      function showBlog(numEntries) {
+        // First sort the blog
+        blog.sort(Blog.blogSorter);
+
+        // Adjust the number of entries to show the full blog, if necessary
+        if (!numEntries)
+          numEntries = blog.length;
+
+        // Show the blog entries
+        var i = 0, blogListHTML = "";
+        while (i < blog.length && i < numEntries) {
+          blogListHTML += blog[i].toHTML(i % 2 == 0);
+          i++;
+        }
+
+        // Set the blog HTML code on the page
+        document.getElementById("blog").innerHTML = decodeURIComponent(blogListHTML);
+      }
+
+      // Search the list of blog entries for a piece of text
+      function searchBlog() {
+        var searchText = document.getElementById("searchtext").value;
+        for (var i = 0; i < blog.length; i++) {
+          // See if the blog entry contains the search text
+          if (blog[i].containsText(searchText)) {
+            alert(blog[i]);
+            break;
+          }
+        }
+
+        
+        if (i == blog.length)
+          alert("Sorry, there are no blog entries containing the search text.");
+      }
+      function randomBlog() {
+        var i = Math.floor(Math.random() * blog.length);
+        alert(blog[i]);
+      }
+
+      
+      function getText(elem) {
+        var text = "";
+        if (elem) {
+          if (elem.childNodes) {
+            for (var i = 0; i < elem.childNodes.length; i++) {
+              var child = elem.childNodes[i];
+              if (child.nodeValue)
+                text += child.nodeValue;
+              else {
+                if (child.childNodes[0])
+                  if (child.childNodes[0].nodeValue)
+                    text += child.childNodes[0].nodeValue;
+              }
+            }
+          }
+        }
+        return text;
+      }
+    </script>
+  </head>
+
+  <body onload="loadBlog();">
+    <h3>YWDD The Blog for Designers</h3>
+
+    <input type="button" id="search" value="Search the Blog" disabled="disabled" onclick="searchBlog();" />
+    <input type="text" id="searchtext" name="searchtext" value="" />
+    <div id="blog"></div>
+    <input type="button" id="showall" value="Show All Blog Entries" disabled="disabled" onclick="showBlog();" />
+    <input type="button" id="viewrandom" value="View a Random Blog Entry" disabled="disabled" onclick="randomBlog();" />
+    <a href="register.html">Back to addblog page </a>
+  </body>
+
+
+
+</html>

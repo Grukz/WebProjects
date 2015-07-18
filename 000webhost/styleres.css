@@ -1,0 +1,58 @@
+.Friends{
+	background: url(images/imgf.jpeg) no-repeat;
+
+}
+.Love{
+	background: url(images/imgl.jpg) no-repeat;
+
+}
+.Affair{
+	background: url(images/imga.jpeg) no-repeat;
+
+}
+.Marriage{
+	background: url(images/imgm.jpeg) no-repeat;
+
+}
+.Enemy{
+	background: url(images/imge.jpg) no-repeat;
+
+}
+.Sister{
+	background: url(images/imgs.jpg) no-repeat;
+
+}
+.Mismatch{
+	background: url(images/crk06.gif);
+}
+.con{
+	background: rgba(0,0,0,0.6) no-repeat;
+	height: 400px;
+	width: 600px;
+	margin: auto;
+	position: relative;
+	top: 60px;
+	color: white;
+	padding: 35px 20px;
+	border-radius: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-style: italic;
+}
+h1{
+	padding-top: 176px;
+	margin-top: 0px;
+
+}
+p{
+	margin-top: 110px;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color: red;
+	font-size: 20px;
+	background: rgba(0,0,0,0.8);
+	padding: 10px 8px;
+	border-radius: 25px;
+}

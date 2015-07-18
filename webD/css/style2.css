@@ -1,0 +1,82 @@
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/DROIDSERIF.TTF);
+}
+#container {
+    width: 40vw;
+    height: 50vh;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    padding: 0;
+    float: right;
+}
+img{
+  cursor: pointer;
+}
+hr{
+  width: 0%;
+}
+h1{
+  font-family: myFont;
+}
+.left{
+  font-family: myFont;
+	margin-top: 15%;
+	margin-left: -50%;
+  color: white;
+  font-size: 3em;
+  width: 40%; 
+}  
+.mid{
+	position: absolute;
+	left: 50%;
+	top: 25%;
+}
+.border { 
+  background: silver; 
+  position: absolute; 
+}
+.borderh { 
+  height: 0px; 
+  border: 1px solid white; 
+}
+.borderv { 
+  width: 0px; 
+  border: 1px solid white; 
+}
+.line{ 
+  height: 0px; 
+  border: 1px solid white; 
+  position: absolute;
+}
+#topbar {   
+  left: 0px; 
+  top: 0px;
+}
+#rightbar {
+  right: 0px; 
+  top: 0px;
+}
+#bottombar {   
+  right: 0px; 
+  bottom: 0px;
+}
+#leftbar {
+  left: 0px; 
+  bottom: 0px;
+}
+#content {
+	  padding: 3%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 100%;
+    height: auto;
+    color: white;
+    text-shadow: 0 0 1px #555;
+    text-align: justify;
+}
+footer{
+  margin-top: 9%;
+}

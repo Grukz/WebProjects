@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- //Triggering link -->
+<a id="triggeringlink" href="#">Element 1</a>
+<!-- //Div to appear upon dimmed DIV -->
+<div id="red">hejsa</div>
+<!-- //Dimming DIV -->
+<div id="page-cover"></div>
+
+<script src="jquery-1.10.2.js"></script>
+<script>
+	$(window).load(function(e){
+  $('#triggeringlink').on('click',function(e){
+     $("#page-cover").css("opacity",0.6).fadeIn(300, function () {            
+        $('#red').animate({'height': 200, 'margin-top': 200, 'margin-left': 200 /*'margin-top': 100*/}, 500);
+     });
+   e.preventDefault();
+   });
+});
+</script>
+	
+</body>
+</html>

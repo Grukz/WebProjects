@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+	input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+</style>
+<body>
+	
+	
+
+	<div class="navbar navbar-inverse navbar-static-top" id="topbar">
+		<div class="container">			
+			<a class="navbar-brand" href="#">Forum</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+	  		<nav class="collapse navbar-collapse navHeaderCollapse">
+	  				<ul class="nav navbar-nav navbar-center">
+	  			  		<li><a href="#">Home</a></li>
+	  			  		<li><a href="#">Ask a question</a></li>
+	  			  	</ul>
+	  			<button type="button" id="button-left" class="btn btn-danger navbar-btn pull-right">Register</button>
+	  			<button type="button" id="button-right" class="btn btn-primary navbar-btn pull-right">Sign In</button>
+	  		</nav>
+		</div>
+	</div>
+	<div class="navbar navbar-inverse navbar-fixed-top" id="topbar1">
+		<div class="container">			
+			<a class="navbar-brand" href="#">Forum</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+	  		<nav class="collapse navbar-collapse navHeaderCollapse">
+	  				<ul class="nav navbar-nav navbar-center">
+	  			  		<li><a href="#">Home</a></li>
+	  			  		<li><a href="#">Ask a question</a></li>
+	  			  	</ul>
+	  			<button type="button" id="button-left" class="btn btn-danger navbar-btn pull-right">Register</button>
+	  			<button type="button" id="button-right" class="btn btn-primary navbar-btn pull-right">Sign In</button>
+	  		</nav>
+		</div>
+	</div>
+
+
+
+	<div class="container" id="jumb">
+		<div class="jumbotron">
+			<center>
+				<h1>Some catchy text here</h1>					
+				<a class ="btn btn-default" href="#">Home</a>
+				<a class = "btn btn-info" href="#">Forum</a>
+			</center>
+		</div>
+	</div>	
+
+	
+
+
+	<div class="container" style="background: yellow;" id="content">
+		<div class="container" style="width: 90%; background: orange;">
+			<div>
+				<p style="font-size: 2em;">question here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut congue diam. Vivamus eleifend arcu at sodales accumsan. Aenean fringilla placerat vestibulum. Ut condimentum???</p>
+			</div>
+			<div>
+				<p style="background: brown; text-align: right; font-style: italic;">Posted by user on date</p>
+			</div>
+		</div>
+		<div class="container" style="background: green; width: 90%; margin-top: 10px;">
+			<div  style="background: blue; padding: 10px; word-wrap: break-word; text-align: right;">				
+				<p style="background: orange; float: left;">userrrrrrrrrrrrrrrrrrrrrrr</p>
+				<p style="background: pink;">08-04-2014</p>
+			</div>
+			<div  style="background: red; overflow: hidden; padding: 20px;">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut congue diam. Vivamus eleifend arcu at sodales accumsan. Aenean fringilla placerat vestibulum. Ut condimentum, ligula ut volutpat pretium, neque ante accumsan mi, id tristique metus mauris ut erat. Donec ac feugiat ipsum. Suspendisse vel purus porta, vestibulum elit a, interdum lorem. Sed velit nulla, luctus sollicitudin neque blandit, cursus porttitor est. Duis vulputate condimentum euismod. Sed hendrerit nisi in pharetra aliquam. In dictum commodo fermentum. Fusce nec facilisis neque. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean fermentum mollis tristique. Etiam rhoncus, augue quis viverra placerat, urna risus consectetur lacus, et malesuada sem nulla ac nunc.
+			</div>
+		</div>
+		<div class="container" style="background: green; width: 90%; margin-top: 10px;">
+			<div  style="background: blue; float: left; padding: 10px; width: 25%; word-wrap: break-word; text-align: right;">				
+				<p style="background: orange;">user</p>
+				<p style="background: pink;">08-04-2014</p>
+			</div>
+			<div  style="background: red; overflow: hidden; padding: 20px;">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut congue diam. Vivamus eleifend arcu at sodales accumsan. Aenean fringilla placerat vestibulum. Ut condimentum, ligula ut volutpat pretium, neque ante accumsan mi, id tristique metus mauris ut erat. Donec ac feugiat ipsum. Suspendisse vel purus porta, vestibulum elit a, interdum lorem. Sed velit nulla, luctus sollicitudin neque blandit, cursus porttitor est. Duis vulputate condimentum euismod. Sed hendrerit nisi in pharetra aliquam. In dictum commodo fermentum. Fusce nec facilisis neque. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean fermentum mollis tristique. Etiam rhoncus, augue quis viverra placerat, urna risus consectetur lacus, et malesuada sem nulla ac nunc.
+			</div>
+		</div>
+
+		<div class="container" style="width: 90%; margin-top: 10px;">
+			<center><div id="loaderImage"></div></center>
+		</div>		
+
+		<div class="container" style="background: white; width: 90%; margin-top: 20px;">
+			<label for="name" style="margin-top: 20px; font-size: 30px;">Post a reply:</label>
+			<textarea name="Reply" style="width: 100%; height: 100px; margin-bottom: 5px; font-size: 20px;" placeholder="Answer here..."></textarea>
+			<button type="button" id="post" class="btn btn-info navbar-btn pull-right">Post Reply</button>
+		</div>		
+	</div>
+
+	<script src="jquery-1.10.2.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		var cSpeed=2;
+		var cWidth=128;
+		var cHeight=128;
+		var cTotalFrames=12;
+		var cFrameWidth=128;
+		var cImageSrc='images/sprites.gif';
+		
+		var cImageTimeout=false;
+		var cIndex=0;
+		var cXpos=0;
+		var cPreloaderTimeout=false;
+		var SECONDS_BETWEEN_FRAMES=0;
+		
+		function startAnimation(){
+			
+			document.getElementById('loaderImage').style.backgroundImage='url('+cImageSrc+')';
+			document.getElementById('loaderImage').style.width=cWidth+'px';
+			document.getElementById('loaderImage').style.height=cHeight+'px';
+			
+			//FPS = Math.round(100/(maxSpeed+2-speed));
+			FPS = Math.round(100/cSpeed);
+			SECONDS_BETWEEN_FRAMES = 1 / FPS;
+			
+			cPreloaderTimeout=setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES/1000);
+			
+		}
+		
+		function continueAnimation(){
+			
+			cXpos += cFrameWidth;
+			//increase the index so we know which frame of our animation we are currently on
+			cIndex += 1;
+			 
+			//if our cIndex is higher than our total number of frames, we're at the end and should restart
+			if (cIndex >= cTotalFrames) {
+				cXpos =0;
+				cIndex=0;
+			}
+			
+			if(document.getElementById('loaderImage'))
+				document.getElementById('loaderImage').style.backgroundPosition=(-cXpos)+'px 0';
+			
+			cPreloaderTimeout=setTimeout('continueAnimation()', SECONDS_BETWEEN_FRAMES*1000);
+		}
+		
+		function stopAnimation(){//stops animation
+			clearTimeout(cPreloaderTimeout);
+			cPreloaderTimeout=false;
+		}
+		
+		function imageLoader(s, fun)//Pre-loads the sprites image
+		{
+			clearTimeout(cImageTimeout);
+			cImageTimeout=0;
+			genImage = new Image();
+			genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+			genImage.onerror=new Function('alert(\'Could not load the image\')');
+			genImage.src=s;
+		}
+		
+		//The following code starts the animation
+		new imageLoader(cImageSrc, 'startAnimation()');
+	</script>
+	<script>
+		/*$(document).scroll(function(){
+			alert('hello');
+		});*/
+		$('div#loaderImage').hide();
+		$('button#post').click(function() {
+			$('div#loaderImage').fadeIn();
+		});
+		$(document).ready(function () {
+			$('div#topbar1').hide();
+			var menu = $('div#jumb');
+			var origOffsetY = menu.offset().top;
+			// alert(menu.offset());
+			$(document).scroll(function(){
+				var relativeY = origOffsetY - $(window).scrollTop(); 
+			    if ($(window).scrollTop() >= (relativeY + 200) ) {
+			        //$('.navbar').removeClass('navbar-static-top').addClass('navbar-fixed-top').slideDown();
+			        $('div#topbar1').fadeIn();
+			    } else {
+			        //$('.navbar').removeClass('navbar-fixed-top').addClass('navbar-static-top');
+			        $('div#topbar1').fadeOut();
+			    }
+			    console.log('scrolltop = ' + $(window).scrollTop() + ' yoffset = ' + relativeY);
+			}); 
+		});
+
+	/*(function () {  //closure to avoid any global variables
+	    var timeoutScroll,
+	        $navbar = $('.navbar'),
+	        $window = $(window);
+
+	    function setOffset() {
+	        bannerH = $('div#content').height();
+	    }
+
+	    function navTop() {
+	        if ($window.scrollTop() > bannerH) {
+	            $navbar.stop().animate({
+	                top: 0
+	            }, 100);
+	        } else {
+	            $navbar.stop().animate({
+	                top: -61
+	            }, 100);
+	        }
+	    }
+
+	    setOffset();
+
+	    $window.scroll(function () {
+	        clearTimeout(timeoutScroll);
+	        timeoutScroll = setTimeout(navTop, 35);
+	    });
+	})();*/
+
+	</script>	
+</body>
+</html>

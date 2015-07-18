@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Books</title>
+	<link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+	<div class="featured">
+		<h2>Featured Books/CDs</h2>
+		<ul class="bxslider">
+		  <li><img src="images/book1.jpg" /></li>
+		  <li><img src="images/book2.jpg" /></li>
+		  <li><img src="images/book3.jpg" /></li>		
+		  <li><img src="images/cd1.jpg" /></li>		
+		</ul>	
+	</div>
+	<div class="filtercontainer">
+		<div class="deptcont">
+			<select name="dept" class="department selectpicker">
+			    <option value="" default selected>Select Department</option>
+			    <option value="Computer Science">Computer Science</option>
+			    <option value="Information Technology">Information Technology</option>
+			    <option value="Mechanical">Mechanical</option>
+			    <option value="Electrical">Electrical</option>
+			    <option value="Civil">Civil</option>
+			    <option value="Mining">Mining</option>
+			    <option value="Metelurgy">Metelurgy</option>
+			</select>			
+		</div>
+		<div class="subcont">
+			<select name="sub" class="subject selectpicker">
+				<option value="" default selected>Select Subject</option>
+			</select>			
+		</div>
+	</div>
+	<div class="bookcontainer">
+	</div>
+</body>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/script1.js"></script>
+</html>

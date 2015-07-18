@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div id="menu">  
+            <div id="userbar">
+                <ul>
+                    <li><strong>admin</strong></li>                
+                    <li><a href="signout.php">Sign out</a></li>
+                </ul>    
+            </div>
+            <div class="nav">
+                <a class="item" href="/heart/index.php">Home</a> 
+                <a class="item" href="/heart/create_topic.php">Create a topic</a>           
+            </div>    
+        </div>  
+    <h1>My forum</h1>  
+    <div id="wrapper">  
+        <div id="content">
+            <h2 id="q">How do i create a php dynamic page?</h2>
+			<div id="posts">
+            <div class="effect2">
+				<div class="left">
+            		<p class="username">Adminnnnnnnnnnnnnn</p>
+            		<p class="date">29-01-2014</p>
+        		</div>
+        		<div class="right">
+            		<p>Hi, This post is awesome. I can see what i can do about it.</p>
+        		</div>
+			</div>
+			<div class="effect2">
+				<div class="left">
+        	    	<p class="username">Adminnnnnnnnnnnnnn</p>
+        	    	<p class="date">29-01-2014</p>
+       		 	</div>
+        		<div class="right">
+        	    	<p>Hi, This post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post isThis post is awesome. I can see what i can desome. I can see what i can desome. I can see what i can desome. I can see what i can do about it.</p>
+       		 	</div>
+			</div>
+        </div>
+	<!-- <form  method="POST" action=""> -->
+                <h2>Post a reply</h2>
+                <textarea name="reply-content" id="text"/></textarea>
+                <br>
+                <input type="submit" value="Post"  id="button" />
+            <!-- </form> -->
+        </div><!-- content -->  
+    </div><!-- wrapper -->  
+    <div id="footer">
+        <P>© Ankur Debnath<P>
+    </div>
+     <script src="jquery-1.10.2.js"></script>
+     <script src="jquery-ui.js"></script>
+
+     <script>
+        
+       $('#button').on('click', function  (e) {
+            e.preventDefault();
+            var $name = $('#text').val();
+            // $.post('echo.php', param1 = $name, function(data, textStatus, xhr) {
+            //      console.log(xhr);
+            //  });
+            $.ajax({
+                 url: 'post.php',
+                 type: 'POST',
+                 data: {'name' : $name},
+                 success: function(){
+                    $('#posts').append('<div class="effect3"><div class="left"><p class="username">Adminnnnnnnnnnnnnn</p><p class="date">29-01-2014</p></div><div class="right"><p>' + $name + '</p></div></div>');
+                    $('.effect3').toggle("slide");
+                    $('#text').val('');
+                },      
+             
+             });
+
+              
+        });       
+    </script>
+
+</body>
+</html>

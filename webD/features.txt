@@ -1,0 +1,18 @@
+Page 1:
+Sign In / Register
+Location
+My profile
+	Profile Picture
+	My books (ordered, issued)
+Need Help? (Top Questions)
+
+
+Page 2:
+Latest books/cd added.(Featured, Trending)
+
+
+
+
+Page 3:
+Contact
+FeedBack (Form)
